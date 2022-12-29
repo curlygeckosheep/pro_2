@@ -1,0 +1,28 @@
+{% include "header.jinja" %}
+{% for eintrag in display.eintraege %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ eintrag.product_name }}</h5>
+        <p class="card-text">{{ eintrag.amount }}</p>
+        <p class="card-text">{{ eintrag.energy }}</p>
+        <p class="card-text">{{ eintrag.fat }}</p>
+        <p class="card-text">{{ eintrag.fat_acids }}</p>
+        <p class="card-text">{{ eintrag.carbs }}</p>
+        <p class="card-text">{{ eintrag.sugar }}</p>
+        <p class="card-text">{{ eintrag.protein }}</p>
+        <p class="card-text">{{ eintrag.salt }}</p>
+    </div>
+  </div>
+
+{% endfor %}
+<h2>Ihr heutiger Nutricount bis jetzt:</h2>
+<h2></h2>
+<h4> Kalorien heute: {{ display.total_energy }} </h4>
+<h4> Fett heute: {{ display.total_fat }} </h4>
+<h4> Kalorien heute: {{ display.total_fat_acids }} </h4>
+<h4> Fett heute: {{ display.total_carbs }} </h4>
+<h4> Kalorien heute: {{ display.total_sugar }} </h4>
+<h4> Fett heute: {{ display.total_protein }} </h4>
+<h4> Kalorien heute: {{ display.total_salt }} </h4>
+
+{% include "footer.jinja" %}
