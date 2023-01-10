@@ -1,4 +1,7 @@
 {% include "header.jinja" %}
+<form method="POST">
+  <button type="submit">Delete</button>
+</form>
 {% for eintrag in display.eintraege %}
 <div class="card" style="width: 18rem;">
     <div class="card-body">
@@ -15,9 +18,10 @@
   </div>
 
 {% endfor %}
+
 <h2>Ihr heutiger Nutricount bis jetzt:</h2>
 <h2></h2>
-<h4> Kalorien heute: {{ display.total_energy }} </h4>
+<h4> Kalorien heute: {{ display.total_energy  }} </h4>
 <h4> Fett heute: {{ display.total_fat }} </h4>
 <h4> Kalorien heute: {{ display.total_fat_acids }} </h4>
 <h4> Fett heute: {{ display.total_carbs }} </h4>

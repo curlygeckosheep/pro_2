@@ -1,0 +1,6 @@
+{% include "header.jinja" %}
+<span style='color:{{ "green" if is_energy_good else "red"}}'>Energy: {{ show_compare.energy }}</span>
+
+{{ show_compare.energy }}
+
+{% include "footer.jinja" %}

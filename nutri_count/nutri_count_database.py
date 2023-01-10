@@ -1,5 +1,9 @@
-from display import Display
-from eintrag import Eintrag
+from display import Display, Eintrag, Compare
+
+def empty_csv():
+    with open("database.csv", "w") as open_file:
+        open_file.write("")
+    return
 
 #Auslesen
 def read():
@@ -13,6 +17,7 @@ def new_entry(product_name, amount, energy, fat, fat_acids, carbs, sugar, protei
     new_content = current_content + f"{product_name},{amount},{energy},{fat},{fat_acids},{carbs},{sugar},{protein},{salt}\n"
     with open("database.csv", "w") as open_file:
         open_file.write(new_content)
+    return
 
 #Darstellung auf index Seite
 def display():
@@ -52,11 +57,19 @@ def calculate_value(amount, value):
 
 
 def compare_value():
-    ist = (energy, fat, fat_acids, carbs, sugar, protein, salt)
-    soll = (15, 10, 5, 4, 3, 2, 1)
-    if ist > soll:
-        return "zu viel"
-    else ist = soll:
-        return "perfekt"
-    elif:
-        return "zu wenig"
+    ist = display()
+    soll = (1500, 10, 5, 4, 3, 2, 1)
+    percentage = 5
+    energy_percent = soll[0] /100 * percentage
+    energy = abs(ist.total_energy - soll[0])
+    compare = Compare(
+        energy = ist.total_energy - soll[0],
+        fat = ist.total_fat - soll[1],
+        fat_acids = ist.total_fat_acids - soll[2],
+        carbs = ist.total_carbs - soll[3],
+        sugar = ist.total_sugar - soll[4],
+        protein = ist.total_protein - soll[5],
+        salt = ist.total_salt - soll[6],
+        is_energy_good= energy_percent >= energy)
+    return compare
+
