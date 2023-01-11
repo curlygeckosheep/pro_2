@@ -55,7 +55,7 @@ def display():
 def calculate_value(amount, value):
     return (value / 100) * amount #echte Menge berechnen, aus 100g/ml
 
-
+#vergleicht die Eingaben der Produkte mit den empfohlenen Werten aus dem Internet
 def compare_value():
     ist = display()
     soll = (1500, 10, 5, 4, 3, 2, 1)
