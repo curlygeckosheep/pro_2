@@ -58,7 +58,7 @@ def calculate_value(amount, value):
 #vergleicht die Eingaben der Produkte mit den empfohlenen Werten aus dem Internet
 def compare_value():
     ist = display()
-    soll = (1500, 10, 5, 4, 3, 2, 1)
+    soll = (2500, 65, 22, 275, 50, 62, 6)
     percentage = 5
     energy_percent = soll[0] /100 * percentage
     energy = abs(ist.total_energy - soll[0])
