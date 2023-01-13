@@ -38,7 +38,7 @@ def display():
                 float(entry[7]),
                 float(entry[8])
             )
-            display.eintraege.append(eintrag) #Fügrt neuen Eintrag hinzu
+            display.eintraege.append(eintrag) #Fügt neuen Eintrag hinzu
     # Berechnung der Gesamtmenge
     for eintrag in display.eintraege:
         display.total_energy += calculate_value(eintrag.amount, eintrag.energy)
@@ -58,11 +58,11 @@ def calculate_value(amount, value):
 #vergleicht die Eingaben der Produkte mit den empfohlenen Werten aus dem Internet
 def compare_value():
     ist = display()
-    soll = (2500, 65, 22, 275, 50, 62, 6)
+    soll = (10460, 65, 22, 275, 50, 62, 6) #kJ und der Rest Gramm, 19-25 Jahre alter Mann
     percentage = 5
-    energy_percent = soll[0] /100 * percentage
-    energy = abs(ist.total_energy - soll[0])
-    compare = Compare(
+    energy_percent = soll[0] /100 * percentage #Berechnet % für Toleranzspanne
+    energy = abs(ist.total_energy - soll[0])   #Definiert Wert als abs olut
+    compare = Compare(                         #Berechnet Diferenz zwischen Soll und Ist
         energy = ist.total_energy - soll[0],
         fat = ist.total_fat - soll[1],
         fat_acids = ist.total_fat_acids - soll[2],

@@ -35,4 +35,4 @@ class Compare:
     sugar: float = 0.0
     protein: float = 0.0
     salt: float = 0.0
-    is_energy_good: bool = False
+    is_energy_good: bool = True
