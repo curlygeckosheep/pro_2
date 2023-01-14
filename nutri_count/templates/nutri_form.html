@@ -8,40 +8,43 @@
 <form method="POST">
   <div class="mb-3">
     <label for="product_name" class="form-label">Produktname:</label>
-    <input type="text" class="form-control" id="product_name" name="product_name">
+    <input type="text" class="form-control if_valid" placeholder="Produkt" id="product_name" name="product_name" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
   </div>
   <form method="POST">
   <div class="mb-3">
     <label for="amount" class="form-label">Menge:(ml oder g)</label>
-    <input type="number" class="form-control" id="amount" name="amount">
+    <input type="number" class="form-control" value="0" id="amount" name="amount">
   </div>
   <div class="mb-3">
     <label for="energy" class="form-label">Energie:</label>
-    <input type="float" class="form-control" id="energy" name="energy">
+    <input type="float" class="form-control" value="0"  id="energy" name="energy">
   </div>
   <div class="mb-3">
     <label for="fat" class="form-label">Fett:</label>
-    <input type="float" class="form-control" id="fat" name="fat">
+    <input type="float" class="form-control" value="0" id="fat" name="fat">
   </div>
   <div class="mb-3">
     <label for="fat_acids" class="form-label">Davon Fettsäuren:</label>
-    <input type="float" class="form-control" id="fat_acids" name="fat_acids">
+    <input type="float" class="form-control" value="0" id="fat_acids" name="fat_acids">
   </div>
  <div class="mb-3">
     <label for="carbs" class="form-label">Kohlenhydrate:</label>
-    <input type="float" class="form-control" id="carbs" name="carbs">
+    <input type="float" class="form-control" value="0" id="carbs" name="carbs">
   </div>
  <div class="mb-3">
     <label for="sugar" class="form-label">Davon Zucker:</label>
-    <input type="float" class="form-control" id="sugar" name="sugar">
+    <input type="float" class="form-control" value="0" id="sugar" name="sugar">
   </div>
  <div class="mb-3">
     <label for="protein" class="form-label">Eiweiss:</label>
-    <input type="float" class="form-control" id="protein" name="protein">
+    <input type="float" class="form-control" value="0" id="protein" name="protein">
   </div>
  <div class="mb-3">
     <label for="salt" class="form-label">Salz:</label>
-    <input type="float" class="form-control" id="salt" name="salt">
+    <input type="float" class="form-control" value="0" id="salt" name="salt">
   </div>
   <button type="submit" class="btn btn-primary">Hinzufügen!</button>
 </form>

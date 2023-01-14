@@ -1,12 +1,9 @@
 {% include "header.jinja" %}
-{% if is_energy_good %}
 
-<span style='color:green'>Energy: {{ show_compare.energy }}</span>
-
+{% if compare_result.is_energy_good == True %}
+    <span style='color:green'>Energy: {{ compare_result.energy }}</span>
 {% else %}
-
-<span style='color:green'>Energy: {{ show_compare.energy }}</span>
-
+    <span style='color:red'>Energy: {{ compare_result.energy }}</span>
 {% endif %}
 
 {% include "footer.jinja" %}

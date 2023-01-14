@@ -3,35 +3,39 @@
 <form method="POST">
   <button type="submit">Delete</button>
 </form>
-{% for eintrag in display.eintraege %}
-<div class="row row-cols-6 ">
-  <div class="col md-4">
-        <div class="card-deck" style="width: 18rem;">
+
+<div class="container">
+    <div class="row">
+
+        {% for eintrag in display.eintraege %}
+
+        <div class="col-sm-3 mb-3 mb-sm-0">
             <div class="card">
-              <h5 class="card-title">{{ eintrag.product_name }}</h5>
-              <p class="card-text">{{ eintrag.amount }}</p>
-              <p class="card-text">{{ eintrag.energy }}</p>
-              <p class="card-text">{{ eintrag.fat }}</p>
-              <p class="card-text">{{ eintrag.fat_acids }}</p>
-              <p class="card-text">{{ eintrag.carbs }}</p>
-              <p class="card-text">{{ eintrag.sugar }}</p>
-              <p class="card-text">{{ eintrag.protein }}</p>
-              <p class="card-text">{{ eintrag.salt }}</p>
+                  <div class="card-body">
+                      <h5 class="card-title">{{ eintrag.product_name }}</h5>
+                      <p class="card-text">{{ eintrag.amount }}</p>
+                      <p class="card-text">{{ eintrag.energy }}</p>
+                      <p class="card-text">{{ eintrag.fat }}</p>
+                      <p class="card-text">{{ eintrag.fat_acids }}</p>
+                      <p class="card-text">{{ eintrag.carbs }}</p>
+                      <p class="card-text">{{ eintrag.sugar }}</p>
+                      <p class="card-text">{{ eintrag.protein }}</p>
+                      <p class="card-text">{{ eintrag.salt }}</p>
+                  </div>
             </div>
         </div>
-  </div>
+        {% endfor %}
+    </div>
 </div>
-
-{% endfor %}
 
 <h2>Ihr heutiger Nutricount bis jetzt:</h2>
 <h2></h2>
-<h4> Kalorien: {{ display.total_energy  }} </h4>
-<h4> Fett: {{ display.total_fat }} </h4>
-<h4> Fettsäuren: {{ display.total_fat_acids }} </h4>
-<h4> Kohlenhydrate: {{ display.total_carbs }} </h4>
-<h4> Davon Zucker: {{ display.total_sugar }} </h4>
-<h4> Eiweiss: {{ display.total_protein }} </h4>
-<h4> Salz: {{ display.total_salt }} </h4>
+<h4> Kalorien: {{ display.total_energy|round(2) }} </h4>
+<h4> Fett: {{ display.total_fat|round(2) }} </h4>
+<h4> Fettsäuren: {{ display.total_fat_acids|round(2) }} </h4>
+<h4> Kohlenhydrate: {{ display.total_carbs|round(2) }} </h4>
+<h4> Davon Zucker: {{ display.total_sugar|round(2) }} </h4>
+<h4> Eiweiss: {{ display.total_protein|round(2) }} </h4>
+<h4> Salz: {{ display.total_salt|round(2) }} </h4>
 
 {% include "footer.jinja" %}

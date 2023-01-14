@@ -19,7 +19,7 @@ def new_entry(product_name, amount, energy, fat, fat_acids, carbs, sugar, protei
         open_file.write(new_content)
     return
 
-#Darstellung auf index Seite
+#Erstellt Eintrag in CSV
 def display():
     lines = read()
     display = Display([])
@@ -39,6 +39,7 @@ def display():
                 float(entry[8])
             )
             display.eintraege.append(eintrag) #Fügt neuen Eintrag hinzu
+
     # Berechnung der Gesamtmenge
     for eintrag in display.eintraege:
         display.total_energy += calculate_value(eintrag.amount, eintrag.energy)
@@ -48,7 +49,6 @@ def display():
         display.total_sugar += calculate_value(eintrag.amount, eintrag.sugar)
         display.total_protein += calculate_value(eintrag.amount, eintrag.protein)
         display.total_salt += calculate_value(eintrag.amount, eintrag.salt)
-
     return display
 
 #Funktion für Berechnung der Gesamtmenge
@@ -57,11 +57,11 @@ def calculate_value(amount, value):
 
 #vergleicht die Eingaben der Produkte mit den empfohlenen Werten aus dem Internet
 def compare_value():
-    ist = display()
+    ist = display() #holt die Summe der Werte
     soll = (10460, 65, 22, 275, 50, 62, 6) #kJ und der Rest Gramm, 19-25 Jahre alter Mann
     percentage = 5
     energy_percent = soll[0] /100 * percentage #Berechnet % für Toleranzspanne
-    energy = abs(ist.total_energy - soll[0])   #Definiert Wert als abs olut
+    energy = abs(ist.total_energy - soll[0])    #Definiert Wert als abs olut
     compare = Compare(                         #Berechnet Diferenz zwischen Soll und Ist
         energy = ist.total_energy - soll[0],
         fat = ist.total_fat - soll[1],
@@ -72,4 +72,3 @@ def compare_value():
         salt = ist.total_salt - soll[6],
         is_energy_good= energy_percent >= energy)
     return compare
-

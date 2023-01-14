@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
+
 from nutri_count_database import new_entry, display, compare_value, empty_csv
 
 app = Flask("nutri_count")
@@ -36,8 +37,10 @@ def new():
 
 @app.route("/compare")
 def compare():
-    show = compare_value()
-    return render_template("compare.html", seitentitel="Vergleichen", show_compare=show)
+    compare_result = compare_value()
+    return render_template("compare.html", compare_result=compare_result)
+    # show = compare_value()
+    # return render_template("compare.html", seitentitel="Vergleichen", show_compare=show)
 
 
 
