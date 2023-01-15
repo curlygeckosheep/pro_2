@@ -36,3 +36,9 @@ class Compare:
     protein: float = 0.0
     salt: float = 0.0
     is_energy_good: bool = False
+    is_fat_good: bool = False
+    is_fat_acids_good: bool = False
+    is_carbs_good: bool = False
+    is_sugar_good: bool = False
+    is_protein_good: bool = False
+    is_salt_good: bool = False

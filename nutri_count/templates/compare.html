@@ -1,9 +1,47 @@
 {% include "header.jinja" %}
-
-{% if compare_result.is_energy_good == True %}
-    <span style='color:green'>Energy: {{ compare_result.energy }}</span>
-{% else %}
-    <span style='color:red'>Energy: {{ compare_result.energy }}</span>
-{% endif %}
-
+<div class="container-fluid" >
+    <div class="col-md-3 offset-md-3">
+        {% if compare_result.is_energy_good == True %}
+            <span style='color:green'>Energy: {{ compare_result.energy }}</span>
+        {% else %}
+            <span style='color:red'>Energy: {{ compare_result.energy }}</span>
+        {% endif %}
+        <h2></h2>
+        {% if compare_result.is_fat_good == True %}
+            <span style='color:green'>Fat: {{ compare_result.fat }}</span>
+        {% else %}
+            <span style='color:red'>Fat: {{ compare_result.fat }}</span>
+        {% endif %}
+        <h2></h2>
+        {% if compare_result.fat_acids_good == True %}
+            <span style='color:green'>Fettsäuren: {{ compare_result.fat_acids }}</span>
+        {% else %}
+            <span style='color:red'>Fettsäuren: {{ compare_result.fat_acids }}</span>
+        {% endif %}
+        <h2></h2>
+        {% if compare_result.is_carbs_good == True %}
+            <span style='color:green'>kohlenhydrate: {{ compare_result.carbs }}</span>
+        {% else %}
+            <span style='color:red'>kohlenhydrate: {{ compare_result.carbs }}</span>
+        {% endif %}
+        <h2></h2>
+        {% if compare_result.is_sugar_good == True %}
+            <span style='color:green'>Zucker: {{ compare_result.sugar }}</span>
+        {% else %}
+            <span style='color:red'>Zucker: {{ compare_result.sugar }}</span>
+        {% endif %}
+        <h2></h2>
+        {% if compare_result.is_protein_good == True %}
+            <span style='color:green'>Eiweiss: {{ compare_result.protein }}</span>
+        {% else %}
+            <span style='color:red'>Eiweiss: {{ compare_result.protein }}</span>
+        {% endif %}
+        <h2></h2>
+        {% if compare_result.is_salt_good == True %}
+            <span style='color:green'>Salz: {{ compare_result.salt }}</span>
+        {% else %}
+            <span style='color:red'>Salz: {{ compare_result.salt }}</span>
+        {% endif %}
+    </div>
+</div>
 {% include "footer.jinja" %}

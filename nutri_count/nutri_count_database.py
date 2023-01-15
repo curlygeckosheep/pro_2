@@ -61,7 +61,19 @@ def compare_value():
     soll = (10460, 65, 22, 275, 50, 62, 6) #kJ und der Rest Gramm, 19-25 Jahre alter Mann
     percentage = 5
     energy_percent = soll[0] /100 * percentage #Berechnet % für Toleranzspanne
+    fat_percent = soll[1] / 100 * percentage
+    fat_acids_percent = soll[2] / 100 * percentage
+    carbs_percent = soll[3] / 100 * percentage
+    sugar_percent = soll[4] / 100 * percentage
+    protein_percent = soll[5] / 100 * percentage
+    salt_percent = soll[6] / 100 * percentage
     energy = abs(ist.total_energy - soll[0])    #Definiert Wert als abs olut
+    fat = abs(ist.total_fat - soll[1])
+    fat_acids = abs(ist.total_fat_acids - soll[2])
+    carbs = abs(ist.total_carbs - soll[3])
+    sugar = abs(ist.total_sugar - soll[4])
+    protein = abs(ist.total_protein - soll[5])
+    salt = abs(ist.total_salt - soll[6])
     compare = Compare(                         #Berechnet Diferenz zwischen Soll und Ist
         energy = ist.total_energy - soll[0],
         fat = ist.total_fat - soll[1],
@@ -70,5 +82,12 @@ def compare_value():
         sugar = ist.total_sugar - soll[4],
         protein = ist.total_protein - soll[5],
         salt = ist.total_salt - soll[6],
-        is_energy_good= energy_percent >= energy)
+
+        is_energy_good= energy_percent >= energy,
+        is_fat_good = fat_percent >= fat,
+        is_fat_acids_good = fat_acids_percent >= fat_acids,
+        is_carbs_good = carbs_percent >= carbs,
+        is_sugar_good = sugar_percent >= sugar,
+        is_protein_good = protein_percent >= protein,
+        is_salt_good = salt_percent >= salt)
     return compare
