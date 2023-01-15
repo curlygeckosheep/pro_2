@@ -1,0 +1,31 @@
+<body>
+{% include "header.jinja" %}
+<form method="POST">
+  <button type="submit">Delete</button>
+</form>
+
+<div class="container">
+    <div class="row">
+
+        {% for eintrag in display.eintraege %}
+
+        <div class="col-sm-3 mb-3 mb-sm-0">
+            <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">{{ eintrag.product_name }}</h5>
+                      <p class="card-text">{{ eintrag.amount }}</p>
+                      <p class="card-text">{{ eintrag.energy }}</p>
+                      <p class="card-text">{{ eintrag.fat }}</p>
+                      <p class="card-text">{{ eintrag.fat_acids }}</p>
+                      <p class="card-text">{{ eintrag.carbs }}</p>
+                      <p class="card-text">{{ eintrag.sugar }}</p>
+                      <p class="card-text">{{ eintrag.protein }}</p>
+                      <p class="card-text">{{ eintrag.salt }}</p>
+                  </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include "footer.jinja" %}

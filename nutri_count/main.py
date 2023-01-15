@@ -15,6 +15,11 @@ def start():
     display_data = display() #zeigt inhalt von csv
     return render_template("index.html", display=display_data, seitentitel="Home")
 
+@app.route("/products")
+def products():
+    show_data = display()    #zeigt inhalt von csv
+    return render_template("products.html",display=show_data, seitentitel="Produkte")
+
 
 @app.route("/new", methods=["GET", "POST"])  # add new product
 def new():
