@@ -8,15 +8,15 @@ from nutri_count_database import new_entry, display, compare_value, empty_csv
 app = Flask("nutri_count")
 
 
-@app.route("/", methods=["GET", "POST"])  # Startseite
+@app.route("/")  # Startseite
 def start():
-    if request.method == "POST":
-        empty_csv()
     display_data = display() #zeigt inhalt von csv
     return render_template("index.html", display=display_data, seitentitel="Home")
 
-@app.route("/products")
+@app.route("/products", methods=["GET", "POST"])
 def products():
+    if request.method == "POST":
+        empty_csv()
     show_data = display()    #zeigt inhalt von csv
     return render_template("products.html",display=show_data, seitentitel="Produkte")
 

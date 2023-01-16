@@ -7,44 +7,47 @@
 <div class="container-fluid" >
     <h3>Bitte fügen Sie ein Produkt hinzu!</h3>
     <form method="POST">
-      <div class="col-md-4 mb-3">
-        <label for="product_name" class="form-label">Produktname:</label>
-        <input type="text" class="form-control if_valid" placeholder="Produkt" id="product_name" name="product_name" required>
+      <div class="col-md-4 row-md-3">
+          <label for="product_name" class="form-label">Produktname:</label>
+          <input type="text" class="form-control if_valid" placeholder="Produkt" id="product_name" name="product_name" required>
       </div>
       <form method="POST">
-      <div class="col-md-4 mb-3">
-        <label for="amount" class="form-label">Menge:</label>
-        <input type="number" class="form-control" placeholder="ml oder g" id="amount" name="amount" required>
+      <div class="col-md-4 row-md-3">
+          <label for="amount" class="form-label">Menge:</label>
+          <input type="number" class="form-control" placeholder="ml oder g" id="amount" name="amount" required>
       </div>
-      <div class="col-md-4 mb-3">
-        <label for="energy" class="form-label">Brennwert:</label>
-        <input type="float" class="form-control" placeholder="kJ" id="energy" name="energy" required>
+      <div class="col-md-4 row-md-3">
+          <label for="energy" class="form-label">Brennwert:</label>
+          <input type="float" class="form-control" placeholder="kJ" id="energy" name="energy" required>
       </div>
-      <div class="col-md-4 mb-3">
-        <label for="fat" class="form-label">Fett:</label>
-        <input type="float" class="form-control" placeholder="g" id="fat" name="fat" required>
+      <div class="col-md-4 row-md-3">
+          <label for="fat" class="form-label">Fett:</label>
+          <input type="float" class="form-control" placeholder="g" id="fat" name="fat" required>
       </div>
-      <div class="col-md-4 mb-3">
-        <label for="fat_acids" class="form-label">Davon Fettsäuren:</label>
-        <input type="float" class="form-control" placeholder="g" id="fat_acids" name="fat_acids" required>
+      <div class="col-md-4 row-md-3">
+          <label for="fat_acids" class="form-label">Davon Fettsäuren:</label>
+          <input type="float" class="form-control" placeholder="g" id="fat_acids" name="fat_acids" required>
       </div>
-     <div class="col-md-4 mb-3">
-        <label for="carbs" class="form-label">Kohlenhydrate:</label>
-        <input type="float" class="form-control" placeholder="g" id="carbs" name="carbs" required>
+      <div class="col-md-4 row-md-3">
+          <label for="carbs" class="form-label">Kohlenhydrate:</label>
+          <input type="float" class="form-control" placeholder="g" id="carbs" name="carbs" required>
       </div>
-     <div class="col-md-4 mb-3">
-        <label for="sugar" class="form-label">Davon Zucker:</label>
-        <input type="float" class="form-control" placeholder="g" id="sugar" name="sugar" required>
+      <div class="col-md-4 row-md-3">
+          <label for="sugar" class="form-label">Davon Zucker:</label>
+          <input type="float" class="form-control" placeholder="g" id="sugar" name="sugar" required>
       </div>
-     <div class="col-md-4 mb-3">
-        <label for="protein" class="form-label">Eiweiss:</label>
-        <input type="float" class="form-control" placeholder="g" id="protein" name="protein" required>
+      <div class="col-md-4 row-md-3">
+          <label for="protein" class="form-label">Eiweiss:</label>
+          <input type="float" class="form-control" placeholder="g" id="protein" name="protein" required>
       </div>
-     <div class="col-md-4 mb-3">
-        <label for="salt" class="form-label">Salz:</label>
-        <input type="float" class="form-control" placeholder="g" id="salt" name="salt" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Hinzufügen!</button>
+      <div class="col-md-4 row-md-3">
+          <label for="salt" class="form-label">Salz:</label>
+          <input type="float" class="form-control" placeholder="g" id="salt" name="salt" required>
+       </div>
+       <h2></h2>
+       <div class="col-md-4 row-md-3">
+           <button type="submit" class="btn btn-primary">Hinzufügen!</button>
+       </div>
     </form>
 </div>
 {% include "footer.jinja" %}
