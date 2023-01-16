@@ -4,23 +4,23 @@
   <button type="submit">Delete</button>
 </form>
 
-<div class="container">
+<div class="container-fluid">
     <div class="row">
 
         {% for eintrag in display.eintraege %}
 
-        <div class="col-sm-3 mb-3 mb-sm-0">
+        <div class="col-xl-2 col-lg-4 col-md-6 ">
             <div class="card">
                   <div class="card-body">
                       <h5 class="card-title">{{ eintrag.product_name }}</h5>
-                      <p class="card-text">{{ eintrag.amount }}</p>
-                      <p class="card-text">{{ eintrag.energy }}</p>
-                      <p class="card-text">{{ eintrag.fat }}</p>
-                      <p class="card-text">{{ eintrag.fat_acids }}</p>
-                      <p class="card-text">{{ eintrag.carbs }}</p>
-                      <p class="card-text">{{ eintrag.sugar }}</p>
-                      <p class="card-text">{{ eintrag.protein }}</p>
-                      <p class="card-text">{{ eintrag.salt }}</p>
+                      <p class="card-text">Menge:            {{ eintrag.amount }}ml/g</p>
+                      <p class="card-text">Brennwert:        {{ eintrag.energy }}kJ</p>
+                      <p class="card-text">Fett:             {{ eintrag.fat }}g</p>
+                      <p class="card-text">Davon Fettsäuren: {{ eintrag.fat_acids }}g</p>
+                      <p class="card-text">Kohlenhydrate:    {{ eintrag.carbs }}g</p>
+                      <p class="card-text">Davon Zucker:     {{ eintrag.sugar }}g</p>
+                      <p class="card-text">Eiweiss:          {{ eintrag.protein }}g</p>
+                      <p class="card-text">Salz:             {{ eintrag.salt }}g</p>
                   </div>
             </div>
         </div>

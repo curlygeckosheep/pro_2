@@ -4,18 +4,18 @@
   <button type="submit">Delete</button>
 </form>
 
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="col">
 
             <h2>Ihr heutiger Nutricount bis jetzt:</h2>
             <h2></h2>
-            <h4> Kalorien: {{ display.total_energy|round(2) }} </h4>
-            <h4> Fett: {{ display.total_fat|round(2) }} </h4>
-            <h4> Fettsäuren: {{ display.total_fat_acids|round(2) }} </h4>
-            <h4> Kohlenhydrate: {{ display.total_carbs|round(2) }} </h4>
-            <h4> Davon Zucker: {{ display.total_sugar|round(2) }} </h4>
-            <h4> Eiweiss: {{ display.total_protein|round(2) }} </h4>
-            <h4> Salz: {{ display.total_salt|round(2) }} </h4>
+            <h4> Brennwerte: {{ display.total_energy|round(2) }}kJ </h4>
+            <h4> Fett: {{ display.total_fat|round(2) }}g </h4>
+            <h4> Davon Fettsäuren: {{ display.total_fat_acids|round(2) }}g </h4>
+            <h4> Kohlenhydrate: {{ display.total_carbs|round(2) }}g </h4>
+            <h4> Davon Zucker: {{ display.total_sugar|round(2) }}g </h4>
+            <h4> Eiweiss: {{ display.total_protein|round(2) }}g </h4>
+            <h4> Salz: {{ display.total_salt|round(2) }}g </h4>
     </div>
 </div>
 {% include "footer.jinja" %}
