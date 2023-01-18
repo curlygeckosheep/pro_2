@@ -59,7 +59,7 @@ def calculate_value(amount, value):
 def compare_value():
     ist = display() #holt die Summe der Werte
     soll = (10460, 65, 22, 275, 50, 62, 6) #kJ und der Rest Gramm, 19-25 Jahre alter Mann
-    percentage = 5
+    percentage = 10
     energy_percent = soll[0] /100 * percentage #Berechnet % für Toleranzspanne
     fat_percent = soll[1] / 100 * percentage
     fat_acids_percent = soll[2] / 100 * percentage
@@ -91,3 +91,4 @@ def compare_value():
         is_protein_good = protein_percent >= protein,
         is_salt_good = salt_percent >= salt)
     return compare
+
