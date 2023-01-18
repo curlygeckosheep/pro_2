@@ -3,45 +3,45 @@
     <h3>Desto Näher der erreichte Wert bei 0 ist, umso näher bist du an deinem empfohlenen täglichen Beadarf an Nährwerten.</h3>
     <div class="col-md-6 offset-md-3">
         {% if compare_result.is_energy_good == True %}
-            <span style='color:green'>Dein Energiebedarf ist optimal: {{ compare_result.energy }} Kilojoule.</span>
+            <span style='color:green'>Dein Energiebedarf ist optimal: {{ compare_result.energy|round(2) }} Kilojoule.</span>
         {% else %}
-            <span style='color:red'>Dein Energiebedarf weicht um: {{ compare_result.energy }} Kilojoule vom Optimum ab. <abbr.</span>
+            <span style='color:red'>Dein Energiebedarf weicht um: {{ compare_result.energy|round(2) }} Kilojoule vom Optimum ab. <abbr.</span>
         {% endif %}
         <h2></h2>
         {% if compare_result.is_fat_good == True %}
-            <span style='color:green'>Dein täglicher Fettbedarf ist optimal: {{ compare_result.fat }} Gramm.</span>
+            <span style='color:green'>Dein täglicher Fettbedarf ist optimal: {{ compare_result.fat|round(2) }} Gramm.</span>
         {% else %}
-            <span style='color:red'>Dein täglicher Fettbedarf weicht um: {{ compare_result.fat }} Gramm vom Optimum ab. </span>
+            <span style='color:red'>Dein täglicher Fettbedarf weicht um: {{ compare_result.fat|round(2) }} Gramm vom Optimum ab. </span>
         {% endif %}
         <h2></h2>
         {% if compare_result.is_fat_acids_good == True %}
-            <span style='color:green'>Dein täglicher Bedarf an Fettsäuren ist optimal: {{ compare_result.fat_acids }} Gramm.</span>
+            <span style='color:green'>Dein täglicher Bedarf an Fettsäuren ist optimal: {{ compare_result.fat_acids|round(2) }} Gramm.</span>
         {% else %}
-            <span style='color:red'>Dein täglicher Bedarf an Fettsäuren weicht um: {{ compare_result.fat_acids }} Gramm vom Optimum ab.</span>
+            <span style='color:red'>Dein täglicher Bedarf an Fettsäuren weicht um: {{ compare_result.fat_acids|round(2) }} Gramm vom Optimum ab.</span>
         {% endif %}
         <h2></h2>
         {% if compare_result.is_carbs_good == True %}
-            <span style='color:green'>Dein täglicher Bedarf an Kohlenhydraten ist optimal: {{ compare_result.carbs }} Gramm.</span>
+            <span style='color:green'>Dein täglicher Bedarf an Kohlenhydraten ist optimal: {{ compare_result.carbs|round(2) }} Gramm.</span>
         {% else %}
-            <span style='color:red'>Dein täglicher Bedarf an Kohlenhydraten weicht um: {{ compare_result.carbs }} Gramm vom Optimum ab.</span>
+            <span style='color:red'>Dein täglicher Bedarf an Kohlenhydraten weicht um: {{ compare_result.carbs|round(2) }} Gramm vom Optimum ab.</span>
         {% endif %}
         <h2></h2>
         {% if compare_result.is_sugar_good == True %}
-            <span style='color:green'>Dein täglicher Zuckerbedarf ist optimal: {{ compare_result.sugar }} Gramm.</span>
+            <span style='color:green'>Dein täglicher Zuckerbedarf ist optimal: {{ compare_result.sugar|round(2) }} Gramm.</span>
         {% else %}
-            <span style='color:red'>Dein täglicher Zuckerbedarf weicht um: {{ compare_result.sugar }} Gramm vom Optimum ab.</span>
+            <span style='color:red'>Dein täglicher Zuckerbedarf weicht um: {{ compare_result.sugar|round(2) }} Gramm vom Optimum ab.</span>
         {% endif %}
         <h2></h2>
         {% if compare_result.is_protein_good == True %}
-            <span style='color:green'>Dein täglicher Eiweissbedarf ist optimal: {{ compare_result.protein }} Gramm</span>
+            <span style='color:green'>Dein täglicher Eiweissbedarf ist optimal: {{ compare_result.protein|round(2) }} Gramm</span>
         {% else %}
-            <span style='color:red'>Dein täglicher Eiweissbedarf weicht um: {{ compare_result.protein }}Gramm vom Optimum ab.</span>
+            <span style='color:red'>Dein täglicher Eiweissbedarf weicht um: {{ compare_result.protein|round(2) }} Gramm vom Optimum ab.</span>
         {% endif %}
         <h2></h2>
         {% if compare_result.is_salt_good == True %}
-            <span style='color:green'>Salz: {{ compare_result.salt }}</span>
+            <span style='color:green'>Salz: {{ compare_result.salt|round(2) }} Gramm.</span>
         {% else %}
-            <span style='color:red'>Salz: {{ compare_result.salt }}Gramm vom Optimum ab. </span>
+            <span style='color:red'>Salz: {{ compare_result.salt|round(2) }} Gramm vom Optimum ab. </span>
         {% endif %}
     </div>
 </div>
