@@ -1,6 +1,6 @@
 {% include "header.jinja" %}
 <div class="container-fluid">
-    <h3>Desto Näher der erreichte Wert bei 0 ist, umso näher bist du an deinem empfohlenen täglichen Beadarf an Nährwerten.</h3>
+    <h3>Desto näher der erreichte Wert bei 0 ist, umso näher bist du an deinem empfohlenen täglichen Bedarf an Nährwerten.</h3>
     <div class="col-md-6 offset-md-3">
         {% if compare_result.is_energy_good == True %}
             <span style='color:green'>Dein Energiebedarf ist optimal: {{ compare_result.energy|round(2) }} Kilojoule.</span>

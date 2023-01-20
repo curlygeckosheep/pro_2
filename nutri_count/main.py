@@ -27,6 +27,7 @@ def products():
     # Rendert template und Inhalt von display() Funktion
     return render_template("products.html", display=show_data, seitentitel="Produkte")
 
+
 # Route für hinzufügen von neuem Orodukt, GET für darstellen, POST für löschen.
 @app.route("/new", methods=["GET", "POST"])
 def new():

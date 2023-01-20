@@ -1,7 +1,7 @@
 {% include "header.jinja" %}
 <div class="mx-auto" style="width: 800px">
     {% if entry_added %}
-    <h4>Produkt hinzugefügt!</h4>
+    <h4>Produkt wurde erfolgreich hinzugefügt!</h4>
     {% endif %}
     {% if error %}
     <div class="alert alert-danger">
@@ -11,6 +11,7 @@
     {% endif %}
     <div class="container-fluid">
         <h4>Bitte füge dein Produkt hinzu!</h4>
+        <h5>Keine Buchstaben oder "," in die Nährwertfelder eingeben.</h5>
         <form method="POST">
             <div class="col-md-4 row-md-3">
                 <label for="product_name" class="form-label">Produktname:</label>
