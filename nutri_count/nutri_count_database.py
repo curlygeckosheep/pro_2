@@ -1,4 +1,4 @@
-from display import Display, Eintrag, Compare
+from datatype import Display, Eintrag, Compare
 
 def empty_csv():
     with open("database.csv", "w") as open_file:

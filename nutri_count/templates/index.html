@@ -1,15 +1,15 @@
 {% include "header.jinja" %}
-<div  class="mx-auto" style="width: 600px">
-        <div class="col">
-                <h1>Ihr heutiger Nutricount bis jetzt:</h1>
-                <h1></h1>
-                <h3> Brennwerte: {{ display.total_energy|round(2) }}kJ </h3>
-                <h3> Fett: {{ display.total_fat|round(2) }}g </h3>
-                <h3> Davon Fettsäuren: {{ display.total_fat_acids|round(2) }}g </h3>
-                <h3> Kohlenhydrate: {{ display.total_carbs|round(2) }}g </h3>
-                <h3> Davon Zucker: {{ display.total_sugar|round(2) }}g </h3>
-                <h3> Eiweiss: {{ display.total_protein|round(2) }}g </h3>
-                <h3> Salz: {{ display.total_salt|round(2) }}g </h3>
-        </div>
+<div class="mx-auto" style="width: 600px">
+    <div class="col">
+        <h1>Ihr heutiger Nutricount bis jetzt:</h1>
+        <h1></h1>
+        <h3> Brennwerte: {{ display.total_energy|round(2) }}kJ </h3>
+        <h3> Fett: {{ display.total_fat|round(2) }}g </h3>
+        <h3> Davon Fettsäuren: {{ display.total_fat_acids|round(2) }}g </h3>
+        <h3> Kohlenhydrate: {{ display.total_carbs|round(2) }}g </h3>
+        <h3> Davon Zucker: {{ display.total_sugar|round(2) }}g </h3>
+        <h3> Eiweiss: {{ display.total_protein|round(2) }}g </h3>
+        <h3> Salz: {{ display.total_salt|round(2) }}g </h3>
+    </div>
 </div>
 {% include "footer.jinja" %}

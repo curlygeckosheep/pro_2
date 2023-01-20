@@ -1,34 +1,65 @@
 {% include "header.jinja" %}
-    <head>
-
-    </head>
-    <body>
-        <canvas id="bar-chart"></canvas>
-        <script>
-            var ctx = document.getElementById('bar-chart').getContext('2d');
-            var chart = new Chart(ctx, {
-                type: 'bar',
-                data: {{ data|tojson }},
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    },
-                    plugins: {
-                        datalabels: {
-                            color: 'white',
-                            anchor: 'center',
-                            align: 'center',
-                            font: {
-                                size: 18
-                            }
-                        }
+<div class="container-fluid min-vh-100" style="height: 100vh;">
+    <div class="row">
+        <div class="col-6">
+            <canvas id="energy-chart"></canvas>
+        </div>
+        <div class="col-6">
+            <canvas id="nutri-chart"></canvas>
+        </div>
+    </div>
+</div>
+<script>
+    // Energy Comparison Chart
+    var energyCtx = document.getElementById('energy-chart').getContext('2d');
+    var energyChart = new Chart(energyCtx, {
+        type: 'bar',
+        data: {{ energyData|tojson }},
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                datalabels: {
+                    color: 'black',
+                    anchor: 'center',
+                    align: 'center',
+                    font: {
+                        size: 18
                     }
                 }
-            });
-        </script>
-    </body>
-</html>
+            }
+        }
+    });
+
+    // Nutritional Comparison Chart
+    var nutriCtx = document.getElementById('nutri-chart').getContext('2d');
+    var nutriChart = new Chart(nutriCtx, {
+        type: 'bar',
+        data: {{ nutriData|tojson }},
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                datalabels: {
+                    color: 'black',
+                    anchor: 'center',
+                    align: 'center',
+                    font: {
+                        size: 18
+                    }
+                }
+            }
+        }
+    });
+</script>
+{% include "footer.jinja" %}
