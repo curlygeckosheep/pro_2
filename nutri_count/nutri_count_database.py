@@ -67,14 +67,14 @@ def compare_value():
     sugar_percent = soll[4] / 100 * percentage
     protein_percent = soll[5] / 100 * percentage
     salt_percent = soll[6] / 100 * percentage
-    energy = abs(ist.total_energy - soll[0])    #Definiert Wert als abs olut
+    energy = abs(ist.total_energy - soll[0])    #Definiert Wert als absolut
     fat = abs(ist.total_fat - soll[1])
     fat_acids = abs(ist.total_fat_acids - soll[2])
     carbs = abs(ist.total_carbs - soll[3])
     sugar = abs(ist.total_sugar - soll[4])
     protein = abs(ist.total_protein - soll[5])
     salt = abs(ist.total_salt - soll[6])
-    compare = Compare(                         #Berechnet Diferenz zwischen Soll und Ist
+    compare = Compare(                         #Berechnet Differenz zwischen Soll und Ist
         energy = ist.total_energy - soll[0],
         fat = ist.total_fat - soll[1],
         fat_acids = ist.total_fat_acids - soll[2],
