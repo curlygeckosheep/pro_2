@@ -33,15 +33,15 @@
         {% endif %}
         <h2></h2>
         {% if compare_result.is_protein_good == True %}
-            <span style='color:green'>Dein täglicher Eiweissbedarf ist optimal: {{ compare_result.protein|round(2) }} Gramm</span>
+            <span style='color:green'>Dein täglicher Eiweissbedarf ist optimal: {{ compare_result.protein|round(2) }} Gramm.</span>
         {% else %}
             <span style='color:red'>Dein täglicher Eiweissbedarf weicht um: {{ compare_result.protein|round(2) }} Gramm vom Optimum ab.</span>
         {% endif %}
         <h2></h2>
         {% if compare_result.is_salt_good == True %}
-            <span style='color:green'>Salz: {{ compare_result.salt|round(2) }} Gramm.</span>
+            <span style='color:green'>Dein täglicher Salzbedarf ist optimal: {{ compare_result.salt|round(2) }} Gramm.</span>
         {% else %}
-            <span style='color:red'>Salz: {{ compare_result.salt|round(2) }} Gramm vom Optimum ab. </span>
+            <span style='color:red'>Dein täglicher Salzbedarf weicht um: {{ compare_result.salt|round(2) }} Gramm vom Optimum ab. </span>
         {% endif %}
     </div>
 </div>
